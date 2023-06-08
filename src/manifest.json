@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Search",
+  "version": "1.0",
+  "description": "Search bookmarks and load associated websites",
+  "permissions": [
+    "bookmarks",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Bookmark Search"
+  },
+  "icons": {
+    "48": "Search_in_Bookmarks48.png",
+    "128": "Search_in_Bookmarks128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "popup.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
+ 
